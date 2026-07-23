@@ -1,0 +1,66 @@
+/* ── Layout ── */
+.eml-container { display: flex; flex-direction: column; gap: 14px; }
+.eml-header    { margin-bottom: 4px; }
+.eml-titulo    { font-size: 17px; font-weight: 700; color: var(--text); margin: 0 0 2px; }
+.eml-sub       { font-size: 12.5px; color: var(--text3); margin: 0; }
+.eml-erro      { display: flex; gap: 8px; align-items: center; color: var(--red); font-size: 13px; padding: 10px 14px; background: var(--red-bg); border-radius: 8px; }
+
+/* KPIs */
+.eml-kpis {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.eml-kpi-card {
+  background: #fff; border: 1px solid var(--border); border-top: 3px solid var(--border);
+  border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow);
+}
+.eml-kpi-label { font-size: 10.5px; font-weight: 700; color: var(--text3); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
+.eml-kpi-valor { font-size: 22px; font-weight: 700; color: var(--text); }
+.eml-kpi-sub   { font-size: 11.5px; color: var(--text3); margin-top: 3px; }
+
+/* Cards genéricos */
+.eml-card {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px 20px; box-shadow: var(--shadow);
+}
+.eml-card-titulo { font-size: 14px; font-weight: 700; color: var(--text); margin: 0 0 4px; }
+
+/* Tabela */
+.eml-tabela { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 640px; }
+.eml-tabela th {
+  background: var(--bg3); padding: 8px 10px;
+  text-align: right; font-size: 10.5px; font-weight: 700;
+  color: var(--text3); text-transform: uppercase; white-space: nowrap;
+}
+.eml-tabela th:first-child { text-align: left; }
+.eml-tabela td { padding: 8px 10px; border-top: 1px solid var(--border); text-align: right; color: var(--text2); }
+.eml-tabela td:first-child { text-align: left; }
+.eml-tabela tbody tr:hover td { background: var(--orange-light); }
+.eml-verde    { color: var(--green)  !important; font-weight: 600; }
+.eml-amarelo  { color: var(--orange) !important; font-weight: 600; }
+.eml-vermelho { color: var(--red)    !important; font-weight: 600; }
+
+/* Rankings */
+.eml-rankings-section { }
+.eml-rankings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.eml-ranking-card {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; box-shadow: var(--shadow);
+}
+.eml-ranking-titulo { font-size: 13px; font-weight: 700; color: var(--text); margin: 0 0 10px; }
+.eml-ranking-tabela { width: 100%; border-collapse: collapse; }
+.eml-ranking-tabela tr { border-top: 1px solid var(--border); }
+.eml-ranking-tabela tr:first-child { border-top: none; }
+.eml-rank-pos  { padding: 6px 8px 6px 0; font-size: 11px; color: var(--text3); width: 22px; }
+.eml-rank-nome { padding: 6px 6px; font-size: 12.5px; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 140px; }
+.eml-rank-val  { padding: 6px 0 6px 6px; font-size: 13px; font-weight: 700; text-align: right; color: var(--orange); white-space: nowrap; }
+
+@media (max-width: 600px) {
+  .eml-kpis          { grid-template-columns: repeat(2, 1fr); }
+  .eml-rankings-grid { grid-template-columns: 1fr; }
+}
