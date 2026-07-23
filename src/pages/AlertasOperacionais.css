@@ -1,0 +1,82 @@
+/* AlertasOperacionais.css — vars de global.css */
+.al-page { display: flex; flex-direction: column; gap: 18px; }
+
+.al-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.al-header-left { display: flex; align-items: flex-start; gap: 12px; }
+.al-header-icon { width: 44px; height: 44px; border-radius: 50%; background: var(--red-bg); color: var(--red); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.al-titulo { font-size: 18px; font-weight: 700; color: var(--text); margin: 0; }
+.al-desc   { font-size: 13px; color: var(--text3); margin: 2px 0 0; }
+
+/* Resultado geração */
+.al-resultado-ger { padding: 12px 16px; background: var(--blue-bg); border: 1px solid #bfdbfe; border-radius: var(--radius2); font-size: 13px; color: var(--blue); }
+.al-erro { display: flex; align-items: center; gap: 8px; padding: 10px 16px; background: var(--red-bg); border: 1px solid #fca5a5; border-radius: var(--radius2); color: var(--red); font-size: 13px; }
+.al-carregando { padding: 40px; text-align: center; color: var(--text3); font-size: 13.5px; }
+.al-vazio { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 40px; text-align: center; color: var(--text3); font-size: 13.5px; }
+.al-vazio p { margin: 0; font-weight: 600; }
+.al-vazio span { font-size: 12px; }
+
+/* KPIs */
+.al-kpis { display: flex; gap: 10px; flex-wrap: wrap; }
+.al-kpi { flex: 1 1 130px; padding: 14px 16px; background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); transition: border-color 0.15s; }
+.al-kpi-destaque { border-width: 2px; }
+.al-kpi-valor { display: block; font-size: 26px; font-weight: 800; line-height: 1.1; }
+.al-kpi-label { display: block; font-size: 12px; color: var(--text3); margin-top: 3px; }
+
+/* Filtros */
+.al-filtros-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.al-filtros-toggle { display: flex; align-items: center; gap: 8px; width: 100%; padding: 12px 18px; background: none; border: none; font-size: 13.5px; font-weight: 600; color: var(--text2); cursor: pointer; }
+.al-filtros-toggle:hover { background: var(--bg3); }
+.al-filtros-badge { font-size: 10px; background: var(--orange); color: #fff; padding: 1px 6px; border-radius: 10px; font-weight: 700; }
+.al-filtros-chevron { margin-left: auto; font-size: 11px; color: var(--text3); }
+.al-filtros-corpo { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 18px 16px; border-top: 1px solid var(--border); }
+.al-fg { display: flex; flex-direction: column; gap: 4px; }
+.al-fl { font-size: 11.5px; font-weight: 600; color: var(--text3); }
+.al-fi, .al-fs { padding: 7px 10px; border: 1px solid var(--border); border-radius: var(--radius2); font-size: 13px; color: var(--text); background: var(--bg2); }
+.al-fi:focus, .al-fs:focus { outline: none; border-color: var(--orange); }
+
+/* Listagem */
+.al-lista-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.al-lista-header { display: flex; align-items: center; justify-content: space-between; padding: 13px 18px; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 8px; }
+.al-lista-titulo { font-size: 14px; font-weight: 700; color: var(--text); }
+.al-lista-sub    { font-weight: 400; color: var(--text3); font-size: 13px; }
+.al-lista-count  { font-size: 12px; color: var(--text3); }
+
+/* Tabela */
+.al-tabela-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.al-tabela { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 860px; }
+.al-tabela thead tr { background: var(--bg3); }
+.al-tabela th { padding: 9px 10px; text-align: left; font-weight: 600; color: var(--text3); border-bottom: 1px solid var(--border); white-space: nowrap; font-size: 11.5px; }
+.al-tabela tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+.al-tabela tbody tr:hover { background: var(--bg3); }
+.al-tabela tbody tr:last-child { border-bottom: none; }
+.al-tabela td { padding: 8px 10px; vertical-align: middle; }
+
+.al-td-mono { font-family: monospace; font-size: 12px; color: var(--text2); }
+.al-td-mot  { max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.al-td-rota { max-width: 100px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.al-td-desc { max-width: 260px; color: var(--text2); font-size: 12px; line-height: 1.4; }
+.al-td-val  { white-space: nowrap; }
+.al-td-ts   { font-size: 11.5px; white-space: nowrap; }
+.al-tc      { color: var(--text4); }
+
+/* Badges */
+.al-badge-sev    { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 10.5px; font-weight: 700; letter-spacing: .3px; }
+.al-badge-tipo   { font-size: 11.5px; font-weight: 600; color: var(--text2); white-space: nowrap; }
+.al-badge-res    { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; background: var(--green-bg); color: var(--green); }
+.al-badge-aberto { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; background: var(--amber-bg); color: var(--amber); }
+
+/* Botões de ação */
+.al-btn-resolver { padding: 4px 10px; border: 1px solid var(--green); border-radius: 4px; background: none; font-size: 11.5px; cursor: pointer; color: var(--green); font-weight: 600; white-space: nowrap; }
+.al-btn-resolver:hover { background: var(--green-bg); }
+.al-btn-link { padding: 4px 10px; border: 1px solid var(--border); border-radius: 4px; background: none; font-size: 11.5px; cursor: pointer; color: var(--blue); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.al-btn-link:hover { background: var(--blue-bg); }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .al-kpi { flex: 1 1 calc(50% - 10px); }
+  .al-filtros-corpo { flex-direction: column; }
+}
+@media (max-width: 480px) {
+  .al-header { flex-direction: column; }
+  .al-kpi { flex: 1 1 100%; }
+}

@@ -1,0 +1,378 @@
+.aud-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.aud-back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius2);
+  border: 1.5px solid var(--border);
+  background: #fff;
+  color: var(--text2);
+  cursor: pointer;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.aud-back-btn:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+}
+
+.aud-header-text h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.aud-header-text p {
+  font-size: 12.5px;
+  color: var(--text3);
+  margin-top: 2px;
+}
+
+/* ---------- Filtros ---------- */
+.aud-filters-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+
+.aud-filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.aud-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.aud-field label {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.aud-field input,
+.aud-field select {
+  padding: 9px 11px;
+  border-radius: var(--radius2);
+  border: 1.5px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.aud-field input:focus,
+.aud-field select:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+}
+
+.aud-search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.aud-search-wrap svg {
+  position: absolute;
+  left: 11px;
+  width: 15px;
+  height: 15px;
+  color: var(--text4);
+  pointer-events: none;
+}
+
+.aud-search-wrap input {
+  width: 100%;
+  padding-left: 34px;
+}
+
+.aud-filters-actions {
+  display: flex;
+  align-items: end;
+}
+
+/* ---------- Tabela ---------- */
+.aud-table-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.aud-table-wrap {
+  overflow-x: auto;
+}
+
+.aud-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* Soma das larguras fixas das colunas (155+142+125+106) + 180px
+     mínimos reservados para "Usuário" — calibradas a partir de medição
+     real do conteúdo renderizado (badge mais longo "Exclusão
+     permanente", tabela mais longa "Operação do Dia", cabeçalho
+     "DETALHES"), não valores arbitrários. Abaixo disso, o wrapper
+     aplica scroll horizontal em vez de espremer o conteúdo. */
+  min-width: 708px;
+  table-layout: fixed;
+}
+
+.aud-table th:nth-child(1), .aud-table td:nth-child(1) { width: 155px; }              /* Data/hora */
+.aud-table th:nth-child(2), .aud-table td:nth-child(2) { width: auto; min-width: 180px; } /* Usuário — recebe o espaço restante */
+.aud-table th:nth-child(3), .aud-table td:nth-child(3) { width: 142px; }              /* Tipo ação — cabe "Exclusão permanente" */
+.aud-table th:nth-child(4), .aud-table td:nth-child(4) { width: 125px; }              /* Tabela — cabe "Operação do Dia" */
+.aud-table th:nth-child(5), .aud-table td:nth-child(5) { width: 106px; }              /* Detalhes — cabeçalho é a string mais larga */
+
+.aud-table th {
+  background: var(--bg3);
+  color: var(--text3);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  padding: 10px 16px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.aud-table td {
+  padding: 11px 16px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.aud-table tbody tr {
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.aud-table tbody tr:hover td {
+  background: var(--orange-light);
+}
+
+.aud-data-cell {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  color: var(--text2);
+}
+
+.aud-data-cell .aud-hora {
+  color: var(--text3);
+  font-size: 11.5px;
+}
+
+.aud-usuario-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.aud-usuario-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--orange-mid);
+  color: var(--orange-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 10.5px;
+  flex-shrink: 0;
+}
+
+.aud-acao-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.aud-acao-criacao { background: var(--green-bg); color: var(--green); }
+.aud-acao-edicao { background: var(--blue-bg); color: var(--blue); }
+.aud-acao-inativacao { background: var(--red-bg); color: var(--red); }
+.aud-acao-reativacao { background: var(--green-bg); color: var(--green); }
+.aud-acao-exclusao_logica { background: var(--amber-bg); color: var(--amber); }
+.aud-acao-exclusao_permanente { background: var(--red-bg); color: var(--red); }
+
+.aud-empty {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text3);
+}
+
+.aud-empty svg {
+  width: 38px;
+  height: 38px;
+  color: var(--text4);
+  margin-bottom: 10px;
+}
+
+/* ---------- Cards (mobile) ---------- */
+.aud-cards {
+  display: none;
+}
+
+.aud-card {
+  padding: 13px 16px;
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.aud-card:first-child {
+  border-top: none;
+}
+
+.aud-card:active {
+  background: var(--orange-light);
+}
+
+.aud-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.aud-card-data {
+  font-size: 12px;
+  color: var(--text3);
+}
+
+.aud-card-usuario {
+  font-weight: 700;
+  font-size: 13.5px;
+  margin-bottom: 4px;
+}
+
+.aud-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 760px) {
+  .aud-table-wrap {
+    display: none;
+  }
+  .aud-cards {
+    display: block;
+  }
+  .aud-filters-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ---------- Modal de detalhes ---------- */
+.aud-detail-meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.aud-detail-meta-item label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text3);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-bottom: 4px;
+}
+
+.aud-detail-meta-item span {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.aud-diff-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.aud-diff-table th {
+  background: var(--bg3);
+  color: var(--text3);
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.aud-diff-table td {
+  padding: 9px 10px;
+  border-top: 1px solid var(--border);
+  font-size: 12.5px;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.aud-diff-table tr.campo-alterado {
+  background: var(--orange-light);
+}
+
+.aud-diff-campo {
+  font-weight: 700;
+  color: var(--text2);
+  white-space: nowrap;
+}
+
+.aud-diff-antes {
+  color: var(--red);
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.aud-diff-depois {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.aud-diff-igual {
+  color: var(--text3);
+}
+
+.aud-observacao-box {
+  margin-top: 16px;
+  padding: 10px 13px;
+  background: var(--bg3);
+  border-radius: var(--radius2);
+  font-size: 12.5px;
+  color: var(--text2);
+}
