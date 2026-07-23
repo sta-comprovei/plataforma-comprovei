@@ -1,0 +1,113 @@
+/* GargalosOperacionais.css — usa variáveis de global.css */
+
+.garg-page { display: flex; flex-direction: column; gap: 18px; }
+
+.garg-header { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.garg-header-left { display: flex; align-items: flex-start; gap: 12px; }
+.garg-header-icon { width: 44px; height: 44px; border-radius: 50%; background: var(--orange-light); color: var(--orange); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.garg-titulo { font-size: 18px; font-weight: 700; }
+.garg-desc { font-size: 13px; color: var(--text3); margin-top: 2px; }
+.garg-link-funil { font-size: 13px; color: var(--orange); font-weight: 600; padding: 7px 12px; border: 1px solid var(--border); border-radius: var(--radius2); }
+
+.garg-erro { display: flex; align-items: center; gap: 8px; padding: 12px 16px; background: var(--red-bg); border: 1px solid #fca5a5; border-radius: var(--radius2); color: var(--red); font-size: 13px; }
+.garg-carregando { padding: 40px; text-align: center; color: var(--text3); font-size: 13.5px; }
+.garg-vazio { padding: 32px; text-align: center; color: var(--text3); font-size: 13.5px; }
+.garg-vazio a { color: var(--orange); font-weight: 600; text-decoration: underline; }
+
+/* Filtros */
+.garg-filtros-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.garg-filtros-toggle { display: flex; align-items: center; gap: 8px; width: 100%; padding: 12px 18px; background: none; border: none; font-size: 13.5px; font-weight: 600; color: var(--text2); cursor: pointer; }
+.garg-filtros-badge { font-size: 10px; background: var(--orange); color: #fff; padding: 1px 6px; border-radius: 10px; font-weight: 700; }
+.garg-filtros-chevron { margin-left: auto; font-size: 11px; color: var(--text3); }
+.garg-filtros-corpo { display: flex; flex-wrap: wrap; gap: 14px; padding: 0 18px 16px; border-top: 1px solid var(--border); }
+.garg-filtro-grupo { display: flex; flex-direction: column; gap: 4px; }
+.garg-filtro-label { font-size: 11.5px; font-weight: 600; color: var(--text3); }
+.garg-filtro-select, .garg-filtro-input { padding: 7px 10px; border: 1px solid var(--border); border-radius: var(--radius2); font-size: 13px; color: var(--text); background: var(--bg2); }
+.garg-filtro-select:focus, .garg-filtro-input:focus { outline: none; border-color: var(--orange); }
+
+/* Abas */
+.garg-abas { display: flex; gap: 0; border-bottom: 2px solid var(--border); }
+.garg-aba { padding: 10px 20px; background: none; border: none; font-size: 13.5px; font-weight: 500; color: var(--text3); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.15s; }
+.garg-aba:hover { color: var(--orange); }
+.garg-aba.ativa { color: var(--orange); font-weight: 700; border-bottom-color: var(--orange); }
+
+/* Card genérico */
+.garg-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+.garg-card-header { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 8px; }
+.garg-card-titulo { font-size: 14px; font-weight: 700; color: var(--text); }
+.garg-card-hint { font-size: 12px; color: var(--text3); }
+
+/* Tabela de gargalos */
+.garg-tabela-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.garg-tabela { width: 100%; border-collapse: collapse; font-size: 13px; }
+.garg-tabela thead tr { background: var(--bg3); }
+.garg-tabela th { padding: 9px 16px; text-align: left; font-weight: 600; color: var(--text3); border-bottom: 1px solid var(--border); white-space: nowrap; }
+.garg-tabela th.text-right { text-align: right; }
+.garg-tabela tbody tr { border-bottom: 1px solid var(--border); transition: background 0.1s; }
+.garg-tabela tbody tr:hover { background: var(--bg3); }
+.garg-tabela tbody tr:last-child { border-bottom: none; }
+.garg-tabela td { padding: 10px 16px; }
+.garg-tabela td.text-right { text-align: right; }
+
+.garg-td-etapa { font-weight: 500; }
+.garg-td-num { font-variant-numeric: tabular-nums; color: var(--text2); }
+.garg-td-tempo { font-variant-numeric: tabular-nums; font-weight: 600; }
+.garg-td-cinza { color: var(--text3); }
+.garg-td-mono { font-family: monospace; font-size: 12px; }
+
+.garg-badge-gargalo { color: var(--red); margin-right: 6px; font-size: 13px; }
+.garg-badge-cls { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; }
+
+/* SLA cards */
+.garg-sla-cards { display: flex; flex-wrap: wrap; gap: 12px; padding: 18px; }
+.garg-card-sla { flex: 1 1 160px; display: flex; flex-direction: column; gap: 3px; padding: 16px; background: var(--bg3); border-radius: var(--radius2); }
+.garg-card-sla-valor { font-size: 20px; font-weight: 800; }
+.garg-card-sla-label { font-size: 12px; color: var(--text3); }
+.garg-card-sla-sub { font-size: 11px; color: var(--text4); }
+
+/* Nota de rodapé */
+.garg-nota { padding: 10px 18px; font-size: 11.5px; color: var(--text4); border-top: 1px solid var(--border); line-height: 1.5; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .garg-header { flex-direction: column; }
+  .garg-sla-cards { gap: 8px; }
+  .garg-card-sla { flex: 1 1 calc(50% - 8px); }
+  .garg-abas { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .garg-aba { white-space: nowrap; padding: 10px 14px; }
+}
+
+@media (max-width: 480px) {
+  .garg-card-sla { flex: 1 1 100%; }
+}
+
+/* ── Relatório 1: Ranking de Gargalos ───────────── */
+.rg-tabela .rg-th-rank { width: 60px; text-align: center; }
+.rg-tabela .rg-th-fonte { font-size: 11px; color: var(--text4); }
+.rg-tabela .rg-td-rank { text-align: center; font-size: 18px; }
+.rg-tabela .rg-td-fonte { font-size: 11px; font-family: monospace; color: var(--text3); white-space: nowrap; }
+.rg-filtro-ativo { padding: 8px 18px; font-size: 12.5px; color: var(--orange); background: var(--orange-light); border-bottom: 1px solid var(--border); }
+
+/* ── Relatório 2: Evolução Mensal ─────────────── */
+.evol-seletor { display: flex; align-items: center; gap: 8px; padding: 12px 18px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.evol-seletor-label { font-size: 12px; font-weight: 600; color: var(--text3); white-space: nowrap; }
+.evol-comp-btn { padding: 4px 12px; border: 1.5px solid var(--border); border-radius: 20px; background: none; font-size: 12px; cursor: pointer; color: var(--text2); transition: all 0.15s; }
+.evol-comp-btn.ativa { border-color: var(--orange); background: var(--orange-light); color: var(--orange); font-weight: 700; }
+.evol-comp-btn:hover { border-color: var(--orange); }
+.evol-tabela .evol-th { font-size: 11px; white-space: nowrap; }
+.evol-tabela .evol-td-tempo { font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+
+/* ── Gerencial: Evolução de Gargalos ────────────── */
+.ger-tabela-evolv .ger-th-etapa { font-size: 11px; text-align: center; border-left: 1px solid var(--border); }
+.ger-tabela-evolv .ger-subheader th { background: var(--bg3); font-size: 10px; color: var(--text3); font-weight: 600; padding: 4px 8px; }
+.ger-tabela-evolv .ger-td-media { font-size: 12px; font-weight: 600; white-space: nowrap; padding: 8px 8px; }
+.ger-tabela-evolv .ger-td-var   { font-size: 11px; white-space: nowrap; padding: 8px 6px; }
+
+/* ── Gerencial: Performance de Rotas ────────────── */
+.ger-tabela-rotas .ger-td-rank { text-align: center; font-size: 15px; width: 40px; }
+.ger-tabela-rotas td, .ger-tabela-rotas th { padding: 8px 10px; }
+
+@media (max-width: 900px) {
+  .ger-tabela-evolv { min-width: 900px; }
+  .ger-tabela-rotas { min-width: 800px; }
+}
