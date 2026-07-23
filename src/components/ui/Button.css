@@ -1,0 +1,118 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 9px 16px;
+  border-radius: var(--radius2);
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: #fff;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--orange-dark);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--text);
+  border: 1.5px solid var(--orange);
+}
+.btn-secondary:hover:not(:disabled) {
+  background: var(--orange-light);
+}
+
+.btn-ghost {
+  background: none;
+  border: 1.5px solid var(--border);
+  color: var(--text2);
+}
+.btn-ghost:hover:not(:disabled) {
+  background: var(--bg3);
+  border-color: var(--border2);
+}
+
+.btn-danger {
+  background: var(--red-bg);
+  color: var(--red);
+  border: 1px solid #fca5a5;
+}
+.btn-danger:hover:not(:disabled) {
+  background: #fee2e2;
+}
+
+.btn-sm {
+  padding: 6px 11px;
+  font-size: 12px;
+}
+
+.btn-icon {
+  padding: 7px;
+  border-radius: var(--radius2);
+}
+
+.btn-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: tns-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.btn-secondary .btn-spinner,
+.btn-ghost .btn-spinner {
+  border: 2px solid var(--orange-mid);
+  border-top-color: var(--orange);
+}
+
+@keyframes tns-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Badge de situação ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.badge-ativo {
+  background: var(--green-bg);
+  color: var(--green);
+}
+.badge-ativo .badge-dot {
+  background: var(--green);
+}
+
+.badge-inativo {
+  background: var(--red-bg);
+  color: var(--red);
+}
+.badge-inativo .badge-dot {
+  background: var(--red);
+}
